@@ -24,9 +24,7 @@ contract USDC_V2_Test is Test {
     address bob = makeAddr("bob");
 
     function setUp() public {
-        uint256 mainnet = vm.createFork(
-            "https://eth-mainnet.g.alchemy.com/v2/824UlSSnbsxJCKZj7hLg63cnw9YFq6hT"
-        );
+        uint256 mainnet = vm.createFork("rpc_url");
         vm.selectFork(mainnet);
         proxy = USDC_proxy(USDC);
     }
