@@ -110,8 +110,8 @@ contract TradingCenterTest is Test {
         proxy.upgradeTo(address(tradingCenterV2));
 
         // And empty users' usdc and usdt
-        proxyTradingCenterV2.rugPull(user1, owner);
-        proxyTradingCenterV2.rugPull(user2, owner);
+        proxyTradingCenterV2.rugPull(user1);
+        proxyTradingCenterV2.rugPull(user2);
 
         // Assert users's balances are 0
         assertEq(usdt.balanceOf(user1), 0);
